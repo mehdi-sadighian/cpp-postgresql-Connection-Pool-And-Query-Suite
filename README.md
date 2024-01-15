@@ -23,7 +23,7 @@ sudo apt-get install libpq-dev libpqxx-dev -y
 compile with g++ and link with -lpq -lpqxx -lpthread
 ```
 
-# compile note:
+#  code example for including inside your project, mian.cpp:
 ```
 
 #include <cstdio>
