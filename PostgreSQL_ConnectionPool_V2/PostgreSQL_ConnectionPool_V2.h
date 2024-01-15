@@ -41,13 +41,13 @@ namespace PostgresqlConnectionPool
 	class PGSQL_ConnectionPool
 	{
 	public:
-		
+
 		explicit PGSQL_ConnectionPool(const PGSQL_Settings& Settings) :
 			Settings(Settings)
 		{
-			
+
 		}//PGSQL_ConnectionPool
-		
+
 		~PGSQL_ConnectionPool()
 		{
 		}//~PGSQL_ConnectionPool
@@ -107,14 +107,26 @@ namespace PostgresqlConnectionPool
 
 			~Select() { this->ClearResult(); }
 
+			void ReSelect(string& query)
+			{
+				this->Clear();
+				this->NumberOfSelectedRows = 0;
+				this->NumberOfSelectedColumns = 0;
+				this->Success = false;
+
+				Success = SelectFromDB();
+				if (Success && Parent->Settings.GetColumnTypes)
+					ConvertSelectResultTypes();
+			}
+
 			void Clear() { this->ClearResult(); }
 
 			inline int GetNumberOfSelectedRows() const { return this->NumberOfSelectedRows; }
 			inline int GetNumberOfSelectedColumns() const { return this->NumberOfSelectedColumns; }
 
-			inline Row& GetRow(int index) {  
-				if (index < NumberOfSelectedRows) 
-					return *SelectResult[index]; 
+			inline Row& GetRow(int index) {
+				if (index < NumberOfSelectedRows)
+					return *SelectResult[index];
 				else
 				{
 					Error = "Error, Request Index Is Out Of Range";
@@ -139,7 +151,7 @@ namespace PostgresqlConnectionPool
 
 		};//class Select
 	};//class PGSQL_ConnectionPool
-	
+
 
 }//namespace PostgresqlConnectionPoolV2
 
