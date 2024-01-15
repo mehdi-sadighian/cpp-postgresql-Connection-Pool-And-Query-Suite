@@ -99,7 +99,9 @@ int main()
     //Select Example:
 
     query = "select id,familyname from t7;";
-    Select PGSelect(&PgsqlConnection, query);//Creare Object, This Will Dispose And Clear itself when goes out of scope
+
+    //Creare Object, This Will Dispose And Clear itself when goes out of scope
+    Select PGSelect(&PgsqlConnection, query);
 
     if (PGSelect.Success)
     {
