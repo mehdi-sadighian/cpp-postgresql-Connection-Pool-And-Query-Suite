@@ -17,7 +17,7 @@ namespace PostgresqlConnectionPool
 
 	bool PGSQL_ConnectionPool::SetupConnectionPool(string& Error)
 	{
-		//check if wen can connect to database
+		//check if we can connect to database
 		try
 		{
 			connection C(ConnectionString);
