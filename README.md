@@ -21,9 +21,9 @@ sudo apt-get install libpq-dev libpqxx-dev -y
 # compile note:
 ```
 compile with g++ and link with -lpq -lpqxx -lpthread
+```
 
-
-#  code example for including inside your project,main.cpp:
+# compile note:
 ```
 
 #include <cstdio>
