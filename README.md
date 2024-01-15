@@ -171,5 +171,25 @@ int main()
        
     }
 
+    //Reselect Using Same Object
+    //this Will Clear Select Result in Object And Puts New Select Results Into it
+
+    query = "select familyname from t7;";
+
+    PGSelect.ReSelect(query);
+
+    if (PGSelect.Success)
+    {
+        cout << "####\nprint ReSelect result example:" << endl;
+
+        for (int i = 0; i < PGSelect.GetNumberOfSelectedRows(); i++)
+        {
+            for (auto& column : PGSelect.GetRow(i))
+            {
+                cout << "column value=" << column << endl;
+            }
+        }
+    }
+
 }//main
 ```
