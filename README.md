@@ -45,7 +45,7 @@ int main()
     PGSettings.db_port = "5432";
     PGSettings.db_name = "test";
     PGSettings.db_user = "root";
-    PGSettings.db_password = "veronica7351";
+    PGSettings.db_password = "testpassword";
     PGSettings.max_connections = 20;
     PGSettings.GetColumnTypes = true;
 
