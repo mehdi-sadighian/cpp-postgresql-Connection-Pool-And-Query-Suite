@@ -1,9 +1,11 @@
+# Info
+```
 version 2.1.12
 https://github.com/mehdi-sadighian/cpp-postgresql-Connection-Pool-And-Query-Suite
 
 // FileCopyrightText: Mehdi Sadighian <https://msadighian.com>
 // License-Identifier: GPL-3.0 license 
-
+```
 
 # postgresql-connection-pool-and-query-suite
 postgresql connection pool  and query suite (c++)
