@@ -40,7 +40,7 @@ using Select = PostgresqlConnectionPool::PGSQL_ConnectionPool::Select;
 
 int main()
 {
-	PGSQL_Settings PGSettings;
+    PGSQL_Settings PGSettings;
     PGSettings.db_host = "127.0.0.1";
     PGSettings.db_port = "5432";
     PGSettings.db_name = "test";
