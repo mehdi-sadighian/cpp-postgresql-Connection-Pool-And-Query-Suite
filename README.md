@@ -5,7 +5,6 @@ postgresql connection pool  and query suite (c++)
 ```
 libpq 
 libpqxx
-
 ```
 # build  example:
 
