@@ -66,7 +66,9 @@ int main()
     else
         cout << "Database Creation Success" << endl;
 
-    //custom query can be used for create table, insert, delete,update,.... BUT NOT SELECT, fro select use select object
+    //custom query can be used for create table, insert, delete,update,.... BUT NOT SELECT
+    //for select use select object
+
     string query;
 
     //create table example
